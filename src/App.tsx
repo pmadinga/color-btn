@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+
+const colors: string[] = [
+  '#D1F0B1', //tea green
+  '#306B34', //Darthmouth green
+  '#1C5253', //Deep jungle green
+  '#E59F71', //Tan crayola
+  '#81667A' //old lavender
+]
+
+const App = () => {
+  const [color, setColor] = useState('#D1F0B1')
+
+  const handleClick = (colors:string[]) =>{
+    setColor(colors[3])
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <nav>
+          <h1>Button Color Switcher</h1>
+        </nav>
       </header>
-    </div>
+
+      <main>
+        <button
+          style={{backgroundColor: color}}
+          color='red' onClick={() => handleClick(colors)}>Test Btn</button>
+      </main>
+    </>
   );
 }
 
