@@ -4,16 +4,16 @@ import './App.css';
 
 function Button(props: {colors: string[]}) {
   const [color, setColor] = useState('#D1F0B1')
-  const [currentColorIndex, setCurrentColorIndex] = useState(0)
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
   const handleClick = (colors:string[]) =>{
     setColor(props.colors[currentColorIndex])
     console.log(currentColorIndex);
     
     if(currentColorIndex >= 4){
-      setCurrentColorIndex(0)
+      setCurrentColorIndex(0);
     }else {
-      setCurrentColorIndex(currentColorIndex + 1)
+      setCurrentColorIndex(currentColorIndex + 1);
     }
   }
   return(
@@ -24,8 +24,8 @@ function Button(props: {colors: string[]}) {
     >
       Color Switcher
     </button>
-)
-}
+  );
+};
 
 
 function App(){
