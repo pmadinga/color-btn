@@ -1,9 +1,24 @@
 nav{
-  background-color: #365900;
+  background-color: #324219;
   padding: 1rem;
 }
 nav h1{
   color: #fff;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 100;
+  background-color: #6a7e57;
+}
+main{
+  position: relative;
+  text-align: center;
+  padding: 2rem 0;
+}
+button{
+  font-size: 3rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  color: #fff;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
 }
